@@ -2388,7 +2388,7 @@ void spider_db_oracle::set_dup_key_idx(
     DBUG_PRINT("info",("spider full key name=%s", buf));
     if (
       max_length < key_name_length &&
-      strcasestr(stored_error_msg, buf)
+      strstr(stored_error_msg, buf)
     ) {
       max_length = key_name_length;
       spider->dup_key_idx = roop_count;
